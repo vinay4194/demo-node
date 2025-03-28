@@ -21,7 +21,7 @@ jobs:
          - name: Deploy to EC2
            run: |
               ssh -o StrictHostKeyChecking=no -i private_key.pem ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
-              cd your-node-project
+              cd demo-node
               git pull origin master
               npm install
               pm2 restart all || pm2 start server.js --name nodeapp
