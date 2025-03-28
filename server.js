@@ -14,7 +14,7 @@ app.use(cors());
 
 //healthcheck
 app.get("/", (req, res) => {
-	res.send("Node app is running! YAYY");
+	res.send("Node app is running! YAY!");
 });
 
 //swagger routes
